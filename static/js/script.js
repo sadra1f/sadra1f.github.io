@@ -17,17 +17,19 @@ const icons = [
 
 
 function showIcons() {
-    document.getElementById("icon-left").innerHTML = icons[counter % 3].inner;
-    document.getElementById("icon-left").href = icons[counter % 3].url;
-    document.getElementById("icon-mid").href = icons[(counter + 1) % 3].url;
-    document.getElementById("icon-mid").innerHTML = icons[(counter + 1) % 3].inner;
-    document.getElementById("icon-right").href = icons[(counter + 2) % 3].url;
-    document.getElementById("icon-right").innerHTML = icons[(counter + 2) % 3].inner;
+    document.getElementById("icon-left").innerHTML = icons[counter % icons.length].inner;
+    document.getElementById("icon-left").href = icons[counter % icons.length].url;
+    
+    document.getElementById("icon-mid").href = icons[(counter + 1) % icons.length].url;
+    document.getElementById("icon-mid").innerHTML = icons[(counter + 1) % icons.length].inner;
+    
+    document.getElementById("icon-right").href = icons[(counter + 2) % icons.length].url;
+    document.getElementById("icon-right").innerHTML = icons[(counter + 2) % icons.length].inner;
 }
 
 function btnLeft() {
     counter += 1;
-    if (counter > 2) {
+    if (counter > icons.length - 1) {
         counter = 0;
     }
     showIcons();
@@ -36,7 +38,7 @@ function btnLeft() {
 function btnRight() {
     counter -= 1;
     if (counter < 0) {
-        counter = 2;
+        counter = icons.length - 1;
     }
     showIcons();
 }

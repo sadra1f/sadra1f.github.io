@@ -13,10 +13,6 @@ body {
     border-width: 2px;
 }
 
-.ta-center {
-    text-align: center;
-}
-
 .image-round {
     border-radius: 100%;
 }
@@ -33,18 +29,20 @@ body {
 }
 
 .inverted-image:hover > img {
+    transition: filter 200ms;
     filter: invert(0%);
 }
 
 #main-box {
-    padding-top: 28vh;
+    min-height: 100vh;
 }
 
 #main-content {
     padding: 20px 0;
 }
 
-#icon-right > img, #icon-left > img {
+#icon-left > img, 
+#icon-right > img {
     widows: 24px;
     height: 24px;
 }
