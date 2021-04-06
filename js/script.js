@@ -45,7 +45,7 @@ function btnRight() {
 }
 
 function getImageURL() {
-    return 'http://www.gravatar.com/avatar/' + md5(email) + '?s=512&r=g';
+    return 'https://www.gravatar.com/avatar/' + md5(email) + '?s=512&r=g';
 }
 
 document.getElementById('profile-picture').setAttribute('src', getImageURL());
