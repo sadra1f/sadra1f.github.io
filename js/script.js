@@ -43,10 +43,4 @@ function btnRight() {
     }
     showIcons();
 }
-
-function getImageURL() {
-    return 'https://www.gravatar.com/avatar/' + md5(email) + '?s=512&r=g';
-}
-
-document.getElementById('profile-picture').setAttribute('src', getImageURL());
 showIcons();
